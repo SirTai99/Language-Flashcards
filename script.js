@@ -1,3 +1,14 @@
+const PASSWORD = "LOL";
+
+function checkPassword() {
+    let input = prompt("Enter password:");
+
+    if (input !== PASSWORD) {
+        document.body.innerHTML = "<h1>Access Denied</h1>";
+        throw new Error("Blocked by password");
+    }
+}
+
 const STORAGE_KEY = "flashcard_decks";
 
 let decks = {
