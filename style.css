@@ -186,16 +186,16 @@ h2, h3 {
 
 /* Mobile Responsive Layout */
 @media (max-width: 600px) {
-
-    .deck,
-    .lesson,
-    .card {
-        width: 90%;
+    body {
+        font-size: 18px;
     }
 
-    button {
-        width: 90%;
-        margin: 5px auto;
+    .card {
+        transform: scale(1.05);
+    }
+
+    #dashboard, #lessonSelect, #studyMode {
+        padding: 20px;
     }
 }
 
