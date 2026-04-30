@@ -380,14 +380,23 @@ function startApp() {
     setInterval(updateDashboardProgress, 2000);
 }
 
+function isMobile() {
+    return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+}
+
 window.onload = function () {
     startApp();
 
-    // load dark mode
+    if (isMobile()) {
+        document.body.style.transform = "scale(1.1)";
+        document.body.style.transformOrigin = "top center";
+    }
+
     if (localStorage.getItem("darkMode") === "true") {
         darkMode = true;
         document.body.classList.add("dark");
     }
 };
+
 
 
