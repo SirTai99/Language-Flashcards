@@ -1,91 +1,99 @@
+<!DOCTYPE html>
+<html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- HEADER -->
+<header class="app-header">
+    <h1 onclick="goHome()" style="cursor: pointer;">
+        🌍 Language Flashcards
+
+    </h1>
+
+    <button onclick="toggleDarkMode()" id="darkToggle">
+        🌙
+    </button>
+</header>
+
 <!-- ================= DASHBOARD ================= -->
 <div id="dashboard">
 
-    <h1>Language Dashboard</h1>
+    <div class="dashboard-grid">
 
-    <button onclick="toggleDarkMode()" id="darkToggle">
-    Toggle Dark Mode
-    </button>
-
-    <div class="deck" onclick="selectLanguage('French')">
+        <div class="deck" onclick="selectLanguage('French')">
             <h2>French 🇫🇷</h2>
-
             <p id="frenchProgress">Progress: 0%</p>
-
             <div class="progress-bar">
                 <div id="frenchBar"></div>
             </div>
         </div>
 
-    <div class="deck" onclick="selectLanguage('Japanese')">
+        <div class="deck" onclick="selectLanguage('Japanese')">
             <h2>Japanese 🇯🇵</h2>
-
             <p id="japaneseProgress">Progress: 0%</p>
-
             <div class="progress-bar">
                 <div id="japaneseBar"></div>
             </div>
         </div>
 
-    <div class="deck" onclick="selectLanguage('Spanish')">
-        <h2>Spanish 🇪🇸</h2>
-
-        <p id="spanishProgress">Progress: 0%</p>
-
-        <div class="progress-bar">
-            <div id="spanishBar"></div>
+        <div class="deck" onclick="selectLanguage('Spanish')">
+            <h2>Spanish 🇪🇸</h2>
+            <p id="spanishProgress">Progress: 0%</p>
+            <div class="progress-bar">
+                <div id="spanishBar"></div>
+            </div>
         </div>
+
     </div>
 
 </div>
 
 <!-- ================= LESSON SELECT ================= -->
 <div id="lessonSelect" style="display:none;">
-
     <h1 id="languageTitle"></h1>
-
     <div id="lessonList"></div>
-
     <button onclick="goBack()">Back</button>
-
 </div>
 
 <!-- ================= STUDY MODE ================= -->
 <div id="studyMode" style="display:none;">
-
     <h1 id="deckTitle"></h1>
 
     <div class="card">
         <div id="cardInner">
             <div id="cardFront"></div>
             <div id="cardBack"></div>
+            <div id="cardBreak"></div>
         </div>
     </div>
-    <button onclick="flipCard()">Flip</button>
 
+    <button onclick="flipCard()">🔄 Flip</button>
     <button onclick="speakCard()">🔊 Pronounce</button>
     <button onclick="stopSpeaking()">🔇 Stop</button>
 
-
-    <button onclick="markEasy()">Easy</button>
-    <button onclick="markHard()">Hard</button>
-    <button onclick="resetSession()">Restart</button>
+    <button onclick="markEasy()">Next</button>
+    <button onclick="markHard()">Skip</button>
+    <button onclick="resetSession()">Reset</button>
     <button onclick="goBack()">Back</button>
-
 </div>
-
-<link rel="stylesheet" href="style.css">
 
 <script src="decks/spanish.js"></script>
 <script src="decks/french.js"></script>
 <script src="decks/japanese.js"></script>
 <script src="script.js"></script>
 
+<h1>Check Us Out</h1>
+
+<address>
+Created by <a href="">Sir Tai</a>.<br> 
+Visit us on:<a href="https://github.com/SirTai99">GitHub</a>.<br>
+Disclaimer AI Was Used For Layout
+</address>
+
 </body>
+</html>
