@@ -7,8 +7,9 @@ const frenchDecks = {
                 Greetings: {
                     type: "deck",
                     cards: [
-                        { front: "Hola", back: "Hello" },
-                        { front: "Gracias", back: "Thank you" }
+                        { front: "Bonjour", back: "Hello", break: "Bo-Jon", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "Merci", back: "Thank you", break: "Mer-Ci", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "Oui", back: "Yes", break: "Oui", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
                     ]
                 }
             }
