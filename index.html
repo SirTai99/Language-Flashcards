@@ -1,0 +1,86 @@
+<body>
+
+<!-- ================= DASHBOARD ================= -->
+<div id="dashboard">
+
+    <h1>Language Dashboard</h1>
+
+    <button onclick="toggleDarkMode()" id="darkToggle">
+    Toggle Dark Mode
+    </button>
+
+    <div class="deck" onclick="selectLanguage('French')">
+            <h2>French 🇫🇷</h2>
+
+            <p id="frenchProgress">Progress: 0%</p>
+
+            <div class="progress-bar">
+                <div id="frenchBar"></div>
+            </div>
+        </div>
+
+    <div class="deck" onclick="selectLanguage('Japanese')">
+            <h2>Japanese 🇯🇵</h2>
+
+            <p id="japaneseProgress">Progress: 0%</p>
+
+            <div class="progress-bar">
+                <div id="japaneseBar"></div>
+            </div>
+        </div>
+
+    <div class="deck" onclick="selectLanguage('Spanish')">
+        <h2>Spanish 🇪🇸</h2>
+
+        <p id="spanishProgress">Progress: 0%</p>
+
+        <div class="progress-bar">
+            <div id="spanishBar"></div>
+        </div>
+    </div>
+
+</div>
+
+<!-- ================= LESSON SELECT ================= -->
+<div id="lessonSelect" style="display:none;">
+
+    <h1 id="languageTitle"></h1>
+
+    <div id="lessonList"></div>
+
+    <button onclick="goBack()">Back</button>
+
+</div>
+
+<!-- ================= STUDY MODE ================= -->
+<div id="studyMode" style="display:none;">
+
+    <h1 id="deckTitle"></h1>
+
+    <div class="card">
+        <div id="cardInner">
+            <div id="cardFront"></div>
+            <div id="cardBack"></div>
+        </div>
+    </div>
+    <button onclick="flipCard()">Flip</button>
+
+    <button onclick="speakCard()">🔊 Pronounce</button>
+    <button onclick="stopSpeaking()">🔇 Stop</button>
+
+
+    <button onclick="markEasy()">Easy</button>
+    <button onclick="markHard()">Hard</button>
+    <button onclick="resetSession()">Restart</button>
+    <button onclick="goBack()">Back</button>
+
+</div>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="decks/spanish.js"></script>
+<script src="decks/french.js"></script>
+<script src="decks/japanese.js"></script>
+<script src="script.js"></script>
+
+</body>
