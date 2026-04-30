@@ -1,3 +1,46 @@
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 12px 20px;
+
+    background: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.15s ease;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.app-header h1:hover {
+    transform: scale(1.05);
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+body.dark .app-header {
+    background: #1b1f2a;
+}
+
+.app-header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+#darkToggle {
+    font-size: 18px;
+    padding: 8px 12px;
+}
+
 body {
     font-family: Arial, sans-serif;
     background: linear-gradient(135deg, #f5f7fa, #e4ecf5);
@@ -26,7 +69,7 @@ body.dark .lesson {
 body.dark .deck,
 body.dark .card {
     background: #1b1f2a !important;
-    color: #535353 !important;
+    color: #6c6c6c !important;
     box-shadow: 0 10px 25px rgba(0,0,0,0.6);
 }
 
@@ -104,8 +147,12 @@ body.dark .progress-bar {
 
 #cardBack {
     transform: rotateY(180deg);
+    font-size: 30px;
 }
 
+.card:active {
+    transform: scale(0.97);
+}
 
 button {
     margin: 6px;
@@ -161,8 +208,9 @@ button:hover {
     transition: 0.2s ease;
 }
 
+.deck:hover,
 .lesson:hover {
-    transform: translateY(-4px);
+    transform: translateY(-5px) scale(1.02);
 }
 
 /* GLOBAL APP LAYOUT */
@@ -184,6 +232,30 @@ h2, h3 {
     margin: 10px 0;
 }
 
+address {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
+    color: #999;
+
+    justify-content: space-evenly;
+    align-items: center;
+
+    padding: 12px 20px;
+
+    background: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+body.dark address {
+    background: #2c2f3a;
+    color: white;
+}
+
 /* Mobile Responsive Layout */
 @media (max-width: 600px) {
     body {
@@ -191,11 +263,17 @@ h2, h3 {
     }
 
     .card {
-        transform: scale(1.05);
+        width: 95%;
+        height: 220px;
     }
 
-    #dashboard, #lessonSelect, #studyMode {
-        padding: 20px;
+    #cardFront, #cardBack, #cardBreak {
+        font-size: 28px;
+    }
+
+    button {
+        width: 90%;
+        font-size: 16px;
     }
 }
 
