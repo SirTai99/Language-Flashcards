@@ -1,7 +1,7 @@
 const japaneseDecks = {
     type: "root",
     children: {
-        "📘 Genki I – Lesson 1 Vocabulary (かな only)": {
+        "📘 Genki I – Lesson 1 Vocabulary (かな only)": { 
             type: "folder",
             children: {
                 "👤 People / Nationalities": {
