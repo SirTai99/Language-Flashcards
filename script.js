@@ -1,14 +1,3 @@
-const PASSWORD = "LOL";
-
-function checkPassword() {
-    let input = prompt("Enter password:");
-
-    if (input !== PASSWORD) {
-        document.body.innerHTML = "<h1>Access Denied</h1>";
-        throw new Error("Blocked by password");
-    }
-}
-
 const STORAGE_KEY = "flashcard_decks";
 
 let decks = {
@@ -24,7 +13,6 @@ let currentLessonName = null;
 let currentIndex = 0;
 let currentNode = null;
 let isFlipped = false;
-let globalStep = 0;
 let studyMode = "full"; // or "breakdown"
 let nodeHistory = [];
 let darkMode = false;
@@ -57,14 +45,15 @@ function selectLanguage(lang) {
 }
 
 function getLessonProgress(lang, lesson) {
-    let cards = decks[lang]?.children?.[lesson]?.cards;
+    let node = decks[lang]?.children?.[lesson];
 
-    if (!cards) return 0;
+    if (!node) return 0;
 
-    let total = cards.length;
-    let done = cards.filter(c => (c.nextReview || 0) <= globalStep).length;
+    let cards = getAllCards(node);
 
-    return total === 0 ? 0 : (done / total) * 100;
+    let learned = cards.filter(c => c.repetitions > 0).length;
+
+    return cards.length === 0 ? 0 : (learned / cards.length) * 100;
 }
 
 function getAllCards(node) {
@@ -142,12 +131,26 @@ function openNode(name) {
     showNode(currentNode);
 }
 
+function shuffleArray(array) {
+    let newArr = [...array];
+
+    for (let i = newArr.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        [newArr[i], newArr[j]] = [newArr[j], newArr[i]];
+    }
+
+    return newArr;
+}
+
 function startDeck(name, mode) {
     studyMode = mode;
 
-    currentLesson = currentNode.children[name].cards;
+    let originalCards = currentNode.children[name].cards;
     currentLessonName = name;
 
+    currentLesson = shuffleArray([...originalCards]);
+
+    initializeCards(currentLesson);
 
     document.getElementById("lessonSelect").style.display = "none";
     document.getElementById("studyMode").style.display = "block";
@@ -163,17 +166,41 @@ function startDeck(name, mode) {
 
 }
 
+function initializeCards(cards) {
+    cards.forEach(card => {
+        if (!card.easeFactor) card.easeFactor = 2.5;
+        if (!card.interval) card.interval = 0;
+        if (!card.repetitions) card.repetitions = 0;
+        if (!card.due) card.due = Date.now();
+    });
+}
+
+function initializeAllDecks() {
+    for (let lang in decks) {
+        let allCards = getAllCards(decks[lang]);
+
+        allCards.forEach(card => {
+            if (!card.easeFactor) card.easeFactor = 2.5;
+            if (!card.interval) card.interval = 0;
+            if (!card.repetitions) card.repetitions = 0;
+            if (!card.due) card.due = Date.now();
+        });
+    }
+}
+
 // ---------------- CARDS ----------------
 function safeCards() {
-    return currentLesson || [];
+    return (currentLesson || []).filter(card => {
+        return !card.due || card.due <= Date.now();
+    });
 }
 
 function showCard() {
     const cards = safeCards();
 
     if (cards.length === 0) {
-        document.getElementById("cardFront").innerText = "No cards found";
-        document.getElementById("cardBack").innerText = "";
+        document.getElementById("cardFront").innerText = "No cards due 🎉";
+        document.getElementById("cardBack").innerText = "Come back later!";
         return;
     }
 
@@ -190,7 +217,7 @@ function showCard() {
     if (studyMode === "breakdown") {
         document.getElementById("cardFront").innerText = card.front;
         document.getElementById("cardBack").innerText =
-            card.back + "\n\nWords: " + card.front.split(" ").join(" | ");
+            card.back + (card.break ? "\n\n/ " + card.break.split(" ").join(" | ") + " /" : "");
     } else {
         document.getElementById("cardFront").innerText = card.front;
         document.getElementById("cardBack").innerText = card.back;
@@ -223,6 +250,8 @@ function speakCard() {
         utterance.lang = "fr-FR";
     } else if (currentLanguage === "Japanese") {
         utterance.lang = "ja-JP";
+    } else if (currentLanguage === "Mixteco") {
+        utterance.lang = "es-MX";
     }
 
     utterance.rate = 0.9; // speed (0.1 - 10)
@@ -304,42 +333,60 @@ function setupCardControls() {
 function markEasy() {
     let card = safeCards()[currentIndex];
 
-    card.interval = card.interval === 0 ? 2 : card.interval * 2;
-    card.nextReview = globalStep + card.interval;
+    card.repetitions++;
 
-    globalStep++;
+    if (card.repetitions === 1) {
+        card.interval = 1; // 1 day
+    } else if (card.repetitions === 2) {
+        card.interval = 3;
+    } else {
+        card.interval = Math.round(card.interval * card.easeFactor);
+    }
 
-    saveDecks(); 
+    card.easeFactor += 0.15;
+
+    card.due = Date.now() + card.interval * 24 * 60 * 60 * 1000;
+
+    saveDecks();
+    updateDashboardProgress();
     nextCard();
 }
 
 function markHard() {
     let card = safeCards()[currentIndex];
 
+    card.repetitions = 0;
     card.interval = 1;
-    card.nextReview = globalStep + 1;
 
-    globalStep++;
-    saveDecks(); 
+    card.easeFactor = Math.max(1.3, card.easeFactor - 0.2);
+
+    card.due = Date.now() + 24 * 60 * 60 * 1000;
+
+    saveDecks();
+    updateDashboardProgress();
     nextCard();
 }
 
 // reset session
 function resetSession() {
-    globalStep = 0;
+    let originalCards = currentNode.children[currentLessonName].cards;
 
-    let cards = safeCards();
-
-    cards.forEach(card => {
+    originalCards.forEach(card => {
         card.interval = 0;
-        card.nextReview = 0;
+        card.repetitions = 0;
+        card.easeFactor = 2.5;
+        card.due = Date.now();
     });
 
+    currentLesson = shuffleArray([...originalCards]);
+
     saveDecks();
+    updateDashboardProgress();
 
     currentIndex = 0;
     showCard();
 }
+
 
 
 // ---------------- DASHBOARD PROGRESS ----------------
@@ -350,9 +397,12 @@ function updateDashboardProgress() {
         let allCards = getAllCards(decks[lang]);
 
         let total = allCards.length;
-        let due = allCards.filter(c => (c.nextReview || 0) <= globalStep).length;
 
-        let percent = total === 0 ? 0 : ((total - due) / total) * 100;
+        let learned = allCards.filter(card => {
+            return card.repetitions > 0;
+        }).length;
+
+        let percent = total === 0 ? 0 : (learned / total) * 100;
 
         let base = lang.toLowerCase();
 
@@ -369,13 +419,29 @@ function updateDashboardProgress() {
     }
 }
 
+function goHome() {
+    nodeHistory = [];
+    currentNode = null;
+
+    currentIndex = 0;
+    currentLesson = null;
+
+    document.getElementById("studyMode").style.display = "none";
+    document.getElementById("lessonSelect").style.display = "none";
+
+    document.getElementById("dashboard").style.display = "block";
+}
+
 // save progress
 function saveDecks() {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(decks));
 }
 
 function startApp() {
+    initializeAllDecks(); 
+
     updateDashboardProgress();
+    
 
     setInterval(updateDashboardProgress, 2000);
 }
