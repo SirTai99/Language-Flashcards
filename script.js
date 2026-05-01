@@ -116,7 +116,15 @@ function showNode(node) {
                     <h3>📘 ${key}</h3>
 
                     <button onclick="event.stopPropagation(); startDeck('${key}', 'full')">Full</button>
-                    <button onclick="event.stopPropagation(); startDeck('${key}', 'breakdown')">Breakdown</button>
+
+                    <button onclick="event.stopPropagation(); startDeck('${key}', 'breakdown')">
+                        Breakdown
+                    </button>
+
+                    <button onclick="event.stopPropagation(); startDeck('${key}', 'typing')">
+                        Typing
+                    </button>
+
                 </div>
             `;
         }
@@ -214,16 +222,73 @@ function showCard() {
         `${currentLanguage} - ${currentLessonName}`;
 
 
-    if (studyMode === "breakdown") {
-        document.getElementById("cardFront").innerText = card.front;
-        document.getElementById("cardBack").innerText =
-            card.back + (card.break ? "\n\n/ " + card.break.split(" ").join(" | ") + " /" : "");
+    if (studyMode === "typing") {
+
+        document.getElementById("typingModeArea").style.display = "block";
+
+        // show meaning/question
+        document.getElementById("cardFront").innerText = card.back;
+
+        // hide answer side
+        document.getElementById("cardBack").innerText = "Type the answer below";
+
+        document.getElementById("typingInput").value = "";
+
+        document.getElementById("typingResult").innerText = "";
+
     } else {
-        document.getElementById("cardFront").innerText = card.front;
-        document.getElementById("cardBack").innerText = card.back;
+
+        document.getElementById("typingModeArea").style.display = "none";
+
+        if (studyMode === "breakdown") {
+
+            document.getElementById("cardFront").innerText = card.front;
+
+            document.getElementById("cardBack").innerText =
+                card.back +
+                (card.break
+                    ? "\n\n/ " + card.break.split(" ").join(" | ") + " /"
+                    : "");
+
+        } else {
+
+            document.getElementById("cardFront").innerText = card.front;
+            document.getElementById("cardBack").innerText = card.back;
+        }
     }
 
     document.getElementById("cardInner").classList.remove("flipped");
+}
+
+function checkTypedAnswer() {
+
+    const card = safeCards()[currentIndex];
+
+    const input = document
+        .getElementById("typingInput")
+        .value
+        .trim()
+        .toLowerCase();
+
+    const correct = card.front
+        .trim()
+        .toLowerCase();
+
+    const result = document.getElementById("typingResult");
+
+    if (input === correct) {
+
+        result.innerText = "✅ Correct!";
+
+        markEasy();
+
+    } else {
+
+        result.innerText =
+            `❌ Correct Answer: ${card.front}`;
+
+        markHard();
+    }
 }
 
 function flipCard() {
@@ -452,6 +517,16 @@ function isMobile() {
 
 window.onload = function () {
     startApp();
+
+    document.addEventListener("keydown", function(e) {
+
+        if (
+            studyMode === "typing" &&
+            e.key === "Enter"
+        ) {
+            checkTypedAnswer();
+        }
+    });
 
     if (isMobile()) {
         document.body.style.transform = "scale(1.1)";

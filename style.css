@@ -256,6 +256,26 @@ body.dark address {
     color: white;
 }
 
+#typingInput {
+    width: 80%;
+    max-width: 400px;
+
+    padding: 12px;
+
+    font-size: 22px;
+
+    border-radius: 10px;
+    border: 2px solid #ccc;
+
+    text-align: center;
+}
+
+#typingResult {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
 /* Mobile Responsive Layout */
 @media (max-width: 600px) {
     body {

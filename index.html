@@ -72,6 +72,23 @@
         </div>
     </div>
 
+    <div id="typingModeArea" style="display:none;">
+
+        <input
+            type="text"
+            id="typingInput"
+            placeholder="Type your answer..."
+        >
+
+        <br><br>
+
+        <button onclick="checkTypedAnswer()">Check</button>
+
+        <p id="typingResult"></p>
+
+    </div>
+
+
     <button onclick="flipCard()">🔄 Flip</button>
     <button onclick="speakCard()">🔊 Pronounce</button>
     <button onclick="stopSpeaking()">🔇 Stop</button>
