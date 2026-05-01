@@ -1,7 +1,7 @@
 const japaneseDecks = {
     type: "root",
     children: {
-        "📘 Genki I – Lesson 1 Vocabulary (かな only)": {
+        "📘 Genki I – Lesson 1 Vocabulary (かな only)": { 
             type: "folder",
             children: {
                 "👤 People / Nationalities": {
@@ -163,7 +163,7 @@ const japaneseDecks = {
                         { front: "なな / しち", back: "7", break: "Na-Na / Shi-Chi", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
                         { front: "はち", back: "8", break: "Ha-Chi", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
                         { front: "きゅう / く", back: "9", break: "Ki-Yu-U / Ku", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "じゅう", back: "10", break: "Ji-Yu-U", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },    
+                        { front: "じゅう", back: "10", break: "Ji-Yu-U", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  }    
                     ]
                 },
             }
