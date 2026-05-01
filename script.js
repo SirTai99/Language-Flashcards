@@ -226,10 +226,10 @@ function showCard() {
 
         document.getElementById("typingModeArea").style.display = "block";
 
-        // show meaning/question
+        document.getElementById("flipButton").style.display = "none";
+
         document.getElementById("cardFront").innerText = card.back;
 
-        // hide answer side
         document.getElementById("cardBack").innerText = "Type the answer below";
 
         document.getElementById("typingInput").value = "";
@@ -239,6 +239,8 @@ function showCard() {
     } else {
 
         document.getElementById("typingModeArea").style.display = "none";
+
+        document.getElementById("flipButton").style.display = "inline-block";
 
         if (studyMode === "breakdown") {
 
@@ -384,13 +386,20 @@ function setupCardControls() {
         if (isDragging) {
             handleSwipe();
         } else {
-            flipCard();
+
+            if (studyMode !== "typing") {
+                flipCard();
+            }
         }
     });
 
     newCard.addEventListener("touchend", () => {
-        flipCard();
+
+        if (studyMode !== "typing") {
+            flipCard();
+        }
     });
+
 }
 
 // ---------------- SPACED REPETITION ----------------
