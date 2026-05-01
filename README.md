@@ -5,4 +5,4 @@ Check it out if you want
 Link:
 https://sirtai99.github.io/Language-Flashcards/
 
-AI Was Used for Layout.
+AI Was Used for Structure.
