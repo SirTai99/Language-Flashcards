@@ -36,13 +36,23 @@ body.dark .app-header {
     margin: 0;
 }
 
+.lang-deck {
+    background: linear-gradient(135deg, #ffffff, #f2f6ff);
+    color: #1a1a1a;
+    border: 2px solid transparent;
+}
+
+.lang-deck:hover {
+    border-color: #2f80ed;
+}
+
 #darkToggle {
     font-size: 18px;
     padding: 8px 12px;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Poppins", sans-serif;
     background: linear-gradient(135deg, #f5f7fa, #e4ecf5);
     margin: 0;
     text-align: center;
@@ -59,6 +69,11 @@ body.dark #dashboard,
 body.dark #lessonSelect,
 body.dark #studyMode {
     background: #0f1115;
+}
+
+body.dark .lang-deck {
+    background: #1b1f2a;
+    color: #ffffff;
 }
 
 body.dark .lesson {
@@ -92,22 +107,26 @@ body.dark .progress-bar {
     }
 }
 
-.deck {
-    background: rgb(255, 255, 255);
+.lang-deck {
+    background: linear-gradient(135deg, #ffffff, #f4f7ff);
+    color: #1a1a1a;
+
     width: 280px;
     margin: 20px auto;
     padding: 25px;
+
     border-radius: 16px;
     cursor: pointer;
+
     box-shadow: 0 6px 18px rgba(0,0,0,0.08);
     transition: 0.25s ease;
-    position: relative;
-    overflow: hidden;
+
+    border: 2px solid transparent;
 }
 
-.deck:hover {
+.lang-deck:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    border-color: #2f80ed;
 }
 
 /* Flashcard */
@@ -143,6 +162,11 @@ body.dark .progress-bar {
     background: white;
     border-radius: 18px;
     font-size: 40px;
+}
+
+body.dark #cardFront,
+body.dark #cardBack {
+    color: #000000;
 }
 
 #cardBack {
