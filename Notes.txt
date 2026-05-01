@@ -1,0 +1,45 @@
+JUST HERE TO HELP ME KEEP TRACK OF PROGRESS
+
+Next up/What it will have:
+
+🔁 Smarter learning (DONE)
+    Show “Hard” cards more often (spaced repetition)
+📚 Real decks (DONE)
+    Add your own words/sentences with input fields
+🧠 Sentence breakdown (this is your NLP angle)
+    Split sentences into words
+    Show meanings per word
+🎨 Make it feel like a real app (DONE)
+    Flip animations
+    Progress bar
+    Clean UI
+🧪 Tag filtering (VERY useful) (DONE)
+    Study only:
+        verbs
+        greetings
+        basics
+🔁 Spaced repetition (like Anki) (DONE)
+    Hard cards appear more often
+➕ Add cards inside the app (MAYBE)
+    No coding needed anymore
+📊 Progress dashboard per deck (DONE)
+    See stats visually
+    Study analytics
+    “You’ve mastered 12 verbs”
+🔊 pronunciation button
+🧠 “reveal hint” before flipping
+🎯 swipe gestures (like real apps) (DONE)
+
+Add typing mode (instead of just flipping)
+
+
+General Idea
+Language Learning
+ ├── Spanish
+ │     ├── Basics
+ │     │     ├── Greetings cards
+ │     │     └── Numbers cards
+ │     └── Intermediate
+ └── French
+       ├── Basics
+       └── Verbs
