@@ -663,6 +663,7 @@ function goHome() {
 
     document.getElementById("studyMode").style.display = "none";
     document.getElementById("lessonSelect").style.display = "none";
+    document.getElementById("indexView").style.display = "none";
 
     document.getElementById("dashboard").style.display = "block";
 }

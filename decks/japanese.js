@@ -538,7 +538,7 @@ const japaneseDecks = {
                         { front: "ごろ", back: "At About...", break: "Go-Ro", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  }
                     ]
                 },
-                "💬 U-Verbs": {
+                "💬 U - Verbs": {
                     type: "deck",
                     cards: [
                         { front: "いく", back: "To Go (Destination)", break: "I-Ku", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() },
@@ -549,7 +549,7 @@ const japaneseDecks = {
                         { front: "よむ", back: "To Read", break: "Yo-Mu", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  }
                     ]
                 },
-                "💬 Ru-Verbs": {
+                "💬 Ru - Verbs": {
                     type: "deck",
                     cards: [
                         { front: "おきる", back: "To Get Up", break: "O-Ki-Ru", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() },
@@ -714,7 +714,7 @@ const japaneseDecks = {
                         { front: "きんようび", back: "Friday", break: "Ki-N-Yo-U-Bi", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  }
                     ]
                 },
-                "💬 U-Verbs": {
+                "💬 U - Verbs": {
                     type: "deck",
                     cards: [
                         { front: "おう", back: "To Meet / To See (A Person)", break: "O-U", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() },
@@ -726,7 +726,7 @@ const japaneseDecks = {
                         { front: "わかる", back: "To Understand", break: "Wa-Ka-Ru", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  }
                     ]
                 },
-                "💬 Ru-Verbs": {
+                "💬 Ru - Verbs": {
                     type: "deck",
                     cards: [
                         { front: "いる", back: "(A Person) Is In... / Stays At...", break: "I-Ru", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() }
@@ -833,39 +833,143 @@ const japaneseDecks = {
         "📘 Genki I – Lesson 5 Vocabulary (かな only)": { 
             type: "folder",
             children: {
-                "🏈 Entertainment / Sports": {
+                "✏️ Nouns": {
                     type: "deck",
                     cards: [
-                        { front: "えいが", back: "Movie", break: "Ei-Ga", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() },
-                        { front: "いんがく", back: "Music", break: "In-Ga-Ku", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "さっし", back: "Magazine", break: "Sa-Shi", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "スポーツ", back: "Sports", break: "Su-Po-Tsu", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "デイト", back: "Date(Romantic, Not Calender)", break: "De-I-To", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "テニス", back: "Tennis", break: "Te-Ni-Su", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "テルビ", back: "Television", break: "Te-Ru-Bi", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  }
+                        { front: "たべもの", back: "Food", break: "Ta-Be-Mo-No", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() },
+                        { front: "のみもの", back: "Drink", break: "No-Mi-Mo-No", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "くだもの", back: "Fruit", break: "Ku-Da-Mo-No", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "やすみ", back: "Holiday / Day Off / Absence", break: "Ya-Su-Mi", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "りょこう", back: "Travel", break: "Ri-Yo-Kou", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "うみ", back: "Sea", break: "U-Mi", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "セーフティン", back: "Surfing", break: "Se-A-Fu-Ti-N", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "おみやげ", back: "Souvenir", break: "Om-I-Ya-Ge", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() },
+                        { front: "バス", back: "Bus", break: "Ba-Su", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "でんき", back: "Weather", break: "De-Nki", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "しゅかだい", back: "Homework", break: "Shi-Yu-Ka-Dai", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "テスト", back: "Test", break: "Te-Stu", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "たんじょうび", back: "Birthday", break: "Tan-Jyo-Bi", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "へや", back: "Room", break: "He-Ya", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "ぼく", back: "I (Used By Men)", break: "Bo-Ku", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "Lイルセイズ", back: "Size (L)", break: "L-I-Ru-Sei-Zu", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  }
                     ]
                 },
-                "🍉 Foods and Drinks": {
+                "📝 い - Adjectives": {
                     type: "deck",
                     cards: [
-                        { front: "アイスクリーム", back: "Ice Cream", break: "Ai-Su-Ku-Ri-Mu", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() },
-                        { front: "ハンバーガー", back: "Hamburger", break: "Han-Ba-Ga", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "おさけ", back: "Sake / Alcoholic Drink", break: "O-Sa-Ke", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "おちゃ", back: "Green Tea", break: "O-Cha", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "コーヒー", back: "Coffee", break: "Ko-Hi", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "みず", back: "Water", break: "Mi-Zu", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "あさごはん", back: "Breakfast", break: "A-Sa-Go-Han", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "ひるごはん", back: "Lunch", break: "Hi-Ru-Go-Han", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "はんごはん", back: "Dinner", break: "Han-Go-Han", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  }
+                        { front: "おたらしい", back: "New", break: "O-Ta-Ra-Shi", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() },
+                        { front: "ふるい", back: "Old (Thing - Not Used For People)", break: "Fu-Ru-I", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "あつい", back: "Hot (Weather)", break: "A-Tsu-I", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "さむい", back: "Cold (Weather - Not Used For Things)", break: "Sa-Mu-I", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "あつい", back: "Hot (Thing)", break: "A-Tsu-I", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "いそがしい", back: "Busy (People / Days)", break: "I-So-Ga-Shi-I", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "おおきい", back: "Large", break: "O-O-Ki-I", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "ちいさい", back: "Small", break: "Chi-I-Sai", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "おもしろい", back: "Interesting / Funny", break: "O-Mo-Shi-Ro-I", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "つまらない", back: "Boring", break: "Tsu-Ma-Ra-Na-I", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "やさしい", back: "Easy (Problem) / Kind (Person)", break: "Ya-Sa-Shi-I", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "むずかしい", back: "Difficult", break: "Mu-Zu-Ka-Shi-I", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "かっこいい", back: "Good-Looking (Conjugates Like いい)", break: "Ka-Kkoi-I", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "こわい", back: "Frightening", break: "Ko-Wa-I", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "たのしい", back: "Fun", break: "Ta-No-Shi", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "やすい", back: "Inexpensive / Cheap (Thing)", break: "Ya-Su-I", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  }
+                    ]
+                },
+                "📝 な - Adjectives": {
+                    type: "deck",
+                    cards: [
+                        { front: "すき", back: "Fond Of / To Like", break: "Su-Ki", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() },
+                        { front: "きらい", back: "Disgusted With / To Dislike", break: "Ki-Ra-I", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "だいすき", back: "Very Fond Of / To Love", break: "Da-I-Su-Ki", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "だいきらい", back: "To Hate", break: "Da-I-Ki-Ra-I", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "きれい", back: "Beautiful / Clean", break: "Ki-Re-I", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "げんき", back: "Healthy / Energetic", break: "Ge-N-Ki", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "しずか", back: "Quiet", break: "Shi-Zu-Ka", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "にぎやか", back: "Lively", break: "Ni-Gi-Ya-Ka", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "ひま", back: "Not Busy / Free (Time)", break: "Hi-Ma", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  }
+                    ]
+                },
+                "💬 U - Verbs": {
+                    type: "deck",
+                    cards: [
+                        { front: "およぐ", back: "To Swim", break: "O-Yo-Gu", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() },
+                        { front: "きく", back: "To Ask (Person)", break: "Ki-Ku", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "のる", back: "To Ride / To Board", break: "No-Ru", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "やる", back: "To Do / To Perform", break: "Ya-Ru", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  }
+                    ]
+                },
+                "💬 Ru - Verbs": {
+                    type: "deck",
+                    cards: [
+                        { front: "でかける", back: "To Go Out", break: "De-Ka-Ke-Ru", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() }
+                    ]
+                },
+                "💬 Adverbs and Other Expressions": {
+                    type: "deck",
+                    cards: [
+                        { front: "いっしょに", back: "Together", break: "I-Sho-Ni", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() },
+                        { front: "すごい", back: "Extremely", break: "Su-Goi", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "だいじょうぶ", back: "It's Okay / Not To Worry / Everything is Under Control", break: "Da-I-Jo-U-Bu", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "とても", back: "Very", break: "To-Te-Mo", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "どんな", back: "What Kind Of...", break: "Do-N-Na", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "…まい", back: "[Counter For Flat Objects]", break: "...Ma-I", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  }
                     ]
                 },
                 "📖 Lesson 5 Vocabulary - Full": {
                     type: "deck",
                     cards: [        
-                        { front: "えいが", back: "Movie", break: "Ei-Ga", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() },
-                        { front: "いんがく", back: "Music", break: "In-Ga-Ku", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "さっし", back: "Magazine", break: "Sa-Shi", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "スポーツ", back: "Sports", break: "Su-Po-Tsu", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  }
+                        { front: "たべもの", back: "Food", break: "Ta-Be-Mo-No", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() },
+                        { front: "のみもの", back: "Drink", break: "No-Mi-Mo-No", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "くだもの", back: "Fruit", break: "Ku-Da-Mo-No", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "やすみ", back: "Holiday / Day Off / Absence", break: "Ya-Su-Mi", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "りょこう", back: "Travel", break: "Ri-Yo-Kou", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "うみ", back: "Sea", break: "U-Mi", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "セーフティン", back: "Surfing", break: "Se-A-Fu-Ti-N", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "おみやげ", back: "Souvenir", break: "Om-I-Ya-Ge", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() },
+                        { front: "バス", back: "Bus", break: "Ba-Su", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "でんき", back: "Weather", break: "De-Nki", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "しゅかだい", back: "Homework", break: "Shi-Yu-Ka-Dai", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "テスト", back: "Test", break: "Te-Stu", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "たんじょうび", back: "Birthday", break: "Tan-Jyo-Bi", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "へや", back: "Room", break: "He-Ya", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "ぼく", back: "I (Used By Men)", break: "Bo-Ku", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "Lイルセイズ", back: "Size (L)", break: "L-I-Ru-Sei-Zu", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "おたらしい", back: "New", break: "O-Ta-Ra-Shi", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() },
+                        { front: "ふるい", back: "Old (Thing - Not Used For People)", break: "Fu-Ru-I", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "あつい", back: "Hot (Weather)", break: "A-Tsu-I", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "さむい", back: "Cold (Weather - Not Used For Things)", break: "Sa-Mu-I", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "あつい", back: "Hot (Thing)", break: "A-Tsu-I", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "いそがしい", back: "Busy (People / Days)", break: "I-So-Ga-Shi-I", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "おおきい", back: "Large", break: "O-O-Ki-I", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "ちいさい", back: "Small", break: "Chi-I-Sai", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "おもしろい", back: "Interesting / Funny", break: "O-Mo-Shi-Ro-I", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "つまらない", back: "Boring", break: "Tsu-Ma-Ra-Na-I", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "やさしい", back: "Easy (Problem) / Kind (Person)", break: "Ya-Sa-Shi-I", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "むずかしい", back: "Difficult", break: "Mu-Zu-Ka-Shi-I", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "かっこいい", back: "Good-Looking (Conjugates Like いい)", break: "Ka-Kkoi-I", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "こわい", back: "Frightening", break: "Ko-Wa-I", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "たのしい", back: "Fun", break: "Ta-No-Shi", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "やすい", back: "Inexpensive / Cheap (Thing)", break: "Ya-Su-I", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "すき", back: "Fond Of / To Like", break: "Su-Ki", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() },
+                        { front: "きらい", back: "Disgusted With / To Dislike", break: "Ki-Ra-I", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "だいすき", back: "Very Fond Of / To Love", break: "Da-I-Su-Ki", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "だいきらい", back: "To Hate", break: "Da-I-Ki-Ra-I", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "きれい", back: "Beautiful / Clean", break: "Ki-Re-I", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "げんき", back: "Healthy / Energetic", break: "Ge-N-Ki", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "しずか", back: "Quiet", break: "Shi-Zu-Ka", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "にぎやか", back: "Lively", break: "Ni-Gi-Ya-Ka", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "ひま", back: "Not Busy / Free (Time)", break: "Hi-Ma", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "およぐ", back: "To Swim", break: "O-Yo-Gu", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() },
+                        { front: "きく", back: "To Ask (Person)", break: "Ki-Ku", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "のる", back: "To Ride / To Board", break: "No-Ru", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "やる", back: "To Do / To Perform", break: "Ya-Ru", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "でかける", back: "To Go Out", break: "De-Ka-Ke-Ru", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() },
+                        { front: "いっしょに", back: "Together", break: "I-Sho-Ni", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() },
+                        { front: "すごい", back: "Extremely", break: "Su-Goi", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "だいじょうぶ", back: "It's Okay / Not To Worry / Everything is Under Control", break: "Da-I-Jo-U-Bu", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "とても", back: "Very", break: "To-Te-Mo", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "どんな", back: "What Kind Of...", break: "Do-N-Na", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "…まい", back: "[Counter For Flat Objects]", break: "...Ma-I", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  }
                     ]
                 },
             }
@@ -874,171 +978,133 @@ const japaneseDecks = {
         "📘 Genki I – Lesson 6 Vocabulary (かな only)": { 
             type: "folder",
             children: {
-                "🏈 Entertainment / Sports": {
+                "✏️ Nouns": {
                     type: "deck",
                     cards: [
-                        { front: "えいが", back: "Movie", break: "Ei-Ga", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() },
-                        { front: "いんがく", back: "Music", break: "In-Ga-Ku", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "さっし", back: "Magazine", break: "Sa-Shi", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "スポーツ", back: "Sports", break: "Su-Po-Tsu", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "デイト", back: "Date(Romantic, Not Calender)", break: "De-I-To", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "テニス", back: "Tennis", break: "Te-Ni-Su", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "テルビ", back: "Television", break: "Te-Ru-Bi", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  }
+                        { front: "かんじ", back: "Kanji / Chinese Characters", break: "Ka-N-Ji", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() },
+                        { front: "きょうかしょ", back: "Textbook", break: "Ki-Yo-U-Ka-Sho", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "ページ", back: "Page", break: "Pe-A-Ji", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "つぎ", back: "Next", break: "Tsu-Gi", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "おかね", back: "Money", break: "O-Ka-Ne", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "にもつ", back: "Baggage", break: "Ni-Mo-Tsu", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "パソコン", back: "Personal Computer", break: "Pa-So-Kon", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "シャフー", back: "Shower", break: "Sha-Fu", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() },
+                        { front: "エアコン", back: "Air Conditioner", break: "E-A-Kon", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "でんき", back: "Electricity / Light", break: "De-N-Ki", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "まど", back: "Window", break: "Ma-Dou", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "でんしゃ", back: "Train", break: "De-N-Sha", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "くに", back: "Country / Place of Origin", break: "Ku-Ni", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "こんしゅう", back: "This Week", break: "Kon-Shu", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "らいしゅう", back: "Next Week", break: "Ra-I-Shu", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "らいねん", back: "Next Year", break: "Ra-I-Ne-N", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "よる", back: "Night", break: "Yo-Ru", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  }
                     ]
                 },
-                "🍉 Foods and Drinks": {
+                "📝 な - Adjective": {
                     type: "deck",
                     cards: [
-                        { front: "アイスクリーム", back: "Ice Cream", break: "Ai-Su-Ku-Ri-Mu", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() },
-                        { front: "ハンバーガー", back: "Hamburger", break: "Han-Ba-Ga", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "おさけ", back: "Sake / Alcoholic Drink", break: "O-Sa-Ke", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "おちゃ", back: "Green Tea", break: "O-Cha", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "コーヒー", back: "Coffee", break: "Ko-Hi", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "みず", back: "Water", break: "Mi-Zu", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "あさごはん", back: "Breakfast", break: "A-Sa-Go-Han", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "ひるごはん", back: "Lunch", break: "Hi-Ru-Go-Han", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "はんごはん", back: "Dinner", break: "Han-Go-Han", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  }
-                    ]
-                },
-                "🏡 Places": {
-                    type: "deck",
-                    cards: [
-                        { front: "いえ", back: "Home / House", break: "I-E", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() },
-                        { front: "うち", back: "Home / House / My Place", break: "U-Chi", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "がっこう", back: "School", break: "Ga-Ko", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "カフェ", back: "Cafe", break: "Ka-Fe", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  }
-                    ]
-                },
-                "⏰ Time": {
-                    type: "deck",
-                    cards: [
-                        { front: "あした", back: "Tomorrow", break: "A-Shi-Ta", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() },
-                        { front: "きゅう", back: "Today", break: "Ki-Yu", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "あさ", back: "Morning", break: "A-Sa", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "こんばん", back: "Tonight", break: "Kon-Ban", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "まいにち", back: "Every Day", break: "Ma-I-Ni-Chi", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "まいばん", back: "Every Night", break: "Ma-I-Ban", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "しゅうまつ", back: "Weekend", break: "Shu-Ma-Tsu", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "どようび", back: "Saturday", break: "Do-Yo-Bi", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "にちようび", back: "Sunday", break: "Ni-Chi-Yo-Bi", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "いつ", back: "When", break: "I-Tsu", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "ごろ", back: "At About...", break: "Go-Ro", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  }
+                        { front: "たいへん", back: "Tough (Situation)", break: "Ta-I-He-N", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() }
                     ]
                 },
                 "💬 U-Verbs": {
                     type: "deck",
                     cards: [
-                        { front: "いく", back: "To Go (Destination)", break: "I-Ku", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() },
-                        { front: "かえる", back: "To Go Back / To Return (Destination)", break: "Ka-E-Ru", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "きく", back: "To Listen / To Hear", break: "Ki-Ku", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "のみ", back: "To Drink", break: "No-Mu", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "はなす", back: "To Speak / To Talk (Language)", break: "Ha-Na-Su", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "よむ", back: "To Read", break: "Yo-Mu", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  }
+                        { front: "あそぶ", back: "To Play / To Spend Time Pleasantly", break: "A-So-Bu", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() },
+                        { front: "いそぐ", back: "To Hurry", break: "I-So-Gu", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "かえす", back: "To Return (A Thing)", break: "Ka-E-Su", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "けす", back: "To Turn Off / To Erase", break: "Ke-Su", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "しぬ", back: "To Die", break: "Shi-Nu", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "すわる", back: "To Sit Down (Seat)", break: "Su-Wa-Ru", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "たつ", back: "To Stand Up", break: "Ta-Tsu", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "たばこをすう", back: "To Smoke", break: "Ta-Ba-Ko-O-Su", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "つかう", back: "To Use", break: "Tsu-Ka-U", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "てつだう", back: "To Help (Person / Task)", break: "Te-Tsu-Da-U", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "はいる", back: "To Enter", break: "Ha-I-Ru", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "もつ", back: "To Carry / To Hold", break: "Mo-Tsu", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "やすむ", back: "To Be Absent (From...) / To Rest", break: "Ya-Su-Mu", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  }
                     ]
                 },
                 "💬 Ru-Verbs": {
                     type: "deck",
                     cards: [
-                        { front: "おきる", back: "To Get Up", break: "O-Ki-Ru", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() },
-                        { front: "たべる", back: "To Eat", break: "Ta-Be-Ru", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "ねる", back: "To Sleep / To go To Sleep", break: "Ne-Ru", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "みる", back: "To See / To Look At / To Watch", break: "Mi-Ru", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  }
+                        { front: "あける", back: "To Open (Something)", break: "A-Ke-Ru", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() },
+                        { front: "しめる", back: "To Close (Something)", break: "Shi-Me-Ru", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "おしえる", back: "To Teach / To Instruct (Person Thing)", break: "O-Shi-E-Ru", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "わすれる", back: "To Forget / To Leave Behind", break: "Wa-Su-Re-Ru", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "おりる", back: "To Get Off", break: "O-Ri-Ru", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "かりる", back: "To Borrow", break: "Ka-Ri-Ru", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "シャワーをあびる", back: "To Take A Shower", break: "Sha-Wa-A-Bi-Ru", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "つける", back: "To Turn On", break: "Tsu-Ke-Ru", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  }
                     ]
                 },
                 "💬 Irregular Verbs": {
                     type: "deck",
                     cards: [
-                        { front: "きる", back: "To Come (Destination)", break: "Ki-Ru", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() },
-                        { front: "する", back: "To Do", break: "Su-Ru", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "べんきょする", back: "To Study", break: "Be-N-Ki-Yo-Su-Ru", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  }
+                        { front: "でんわする", back: "To Call", break: "De-N-Wa-Su-Ru", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() },
+                        { front: "つれてくる", back: "To Bring (A Person)", break: "Tsu-Re-Te-Ku-Ru", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "もってくる", back: "To Bring (A Thing)", break: "Mo-Tte-Ku-Ru", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  }
                     ]
                 },
-                "💬 Adjetives": {
+                "💬 Adverbs and Other Expressions": {
                     type: "deck",
                     cards: [
-                        { front: "いい", back: "Good", break: "I-I", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() },
-                        { front: "はやい", back: "Early", break: "Ha-Ya-I", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  }
+                        { front: "あとで", back: "Later On", break: "A-To-De", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() },
+                        { front: "すぐ", back: "Right Away", break: "Su-Gu", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "ゆっくり", back: "Slowly / Leisurely / Unhurriedly", break: "Yu-Kku-Ri", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "けっこうです", back: "That Would Be Fine / That Wouldn't Be Necessary", break: "Ke-Kko-U-De-Su", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "ほんとうですか", back: "Really?", break: "Ho-N-Tou-De-Su-Ka", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  }
                     ]
                 },
-                "💬 Adverbs": {
-                    type: "deck",
-                    cards: [
-                        { front: "あまり", back: "Not Much", break: "A-Ma-Ri", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() },
-                        { front: "ぜんぜん", back: "Not At All", break: "Ze-N-Ze-N", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "だいてい", back: "Usually", break: "Da-I-Ta-I", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "ちょっと", back: "A Little", break: "Cho-Tto", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "ときどき", back: "Sometimes", break: "To-Ki-Do-Ki", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "よく", back: "Often / Much", break: "Yo-Ku", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  }
-                    ]
-                },
-                "💬 Expressions": {
-                    type: "deck",
-                    cards: [
-                        { front: "そうですね", back: "That's Right / Let Me See", break: "So-U-De-Su-Ne", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() },
-                        { front: "でも", back: "But", break: "De-Mo", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "どうですか", back: "How About...? / How is...?", break: "Do-U-De-Su-Ka", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "ええ", back: "Yes (Conversation)", break: "E-E", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  }
-                    ]
-                },
-                "📖 Lesson 2 Vocabulary - Full": {
+                "📖 Lesson 6 Vocabulary - Full": {
                     type: "deck",
                     cards: [        
-                        { front: "えいが", back: "Movie", break: "Ei-Ga", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() },
-                        { front: "いんがく", back: "Music", break: "In-Ga-Ku", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "さっし", back: "Magazine", break: "Sa-Shi", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "スポーツ", back: "Sports", break: "Su-Po-Tsu", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "デイト", back: "Date(Romantic, Not Calender)", break: "De-I-To", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "テニス", back: "Tennis", break: "Te-Ni-Su", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "テルビ", back: "Television", break: "Te-Ru-Bi", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "アイスクリーム", back: "Ice Cream", break: "Ai-Su-Ku-Ri-Mu", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() },
-                        { front: "ハンバーガー", back: "Hamburger", break: "Han-Ba-Ga", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "おさけ", back: "Sake / Alcoholic Drink", break: "O-Sa-Ke", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "おちゃ", back: "Green Tea", break: "O-Cha", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "コーヒー", back: "Coffee", break: "Ko-Hi", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "みず", back: "Water", break: "Mi-Zu", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "あさごはん", back: "Breakfast", break: "A-Sa-Go-Han", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "ひるごはん", back: "Lunch", break: "Hi-Ru-Go-Han", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "はんごはん", back: "Dinner", break: "Han-Go-Han", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "いえ", back: "Home / House", break: "I-E", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() },
-                        { front: "うち", back: "Home / House / My Place", break: "U-Chi", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "がっこう", back: "School", break: "Ga-Ko", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "カフェ", back: "Cafe", break: "Ka-Fe", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "あした", back: "Tomorrow", break: "A-Shi-Ta", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() },
-                        { front: "きゅう", back: "Today", break: "Ki-Yu", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "あさ", back: "Morning", break: "A-Sa", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "こんばん", back: "Tonight", break: "Kon-Ban", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "まいにち", back: "Every Day", break: "Ma-I-Ni-Chi", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "まいばん", back: "Every Night", break: "Ma-I-Ban", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "しゅうまつ", back: "Weekend", break: "Shu-Ma-Tsu", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "どようび", back: "Saturday", break: "Do-Yo-Bi", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "にちようび", back: "Sunday", break: "Ni-Chi-Yo-Bi", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "いつ", back: "When", break: "I-Tsu", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "ごろ", back: "At About...", break: "Go-Ro", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "いく", back: "To Go (Destination)", break: "I-Ku", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() },
-                        { front: "かえる", back: "To Go Back / To Return (Destination)", break: "Ka-E-Ru", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "きく", back: "To Listen / To Hear", break: "Ki-Ku", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "のみ", back: "To Drink", break: "No-Mu", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "はなす", back: "To Speak / To Talk (Language)", break: "Ha-Na-Su", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "よむ", back: "To Read", break: "Yo-Mu", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "おきる", back: "To Get Up", break: "O-Ki-Ru", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() },
-                        { front: "たべる", back: "To Eat", break: "Ta-Be-Ru", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "ねる", back: "To Sleep / To go To Sleep", break: "Ne-Ru", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "みる", back: "To See / To Look At / To Watch", break: "Mi-Ru", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "きる", back: "To Come (Destination)", break: "Ki-Ru", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() },
-                        { front: "する", back: "To Do", break: "Su-Ru", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "べんきょする", back: "To Study", break: "Be-N-Ki-Yo-Su-Ru", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "いい", back: "Good", break: "I-I", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() },
-                        { front: "はやい", back: "Early", break: "Ha-Ya-I", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "あまり", back: "Not Much", break: "A-Ma-Ri", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() },
-                        { front: "ぜんぜん", back: "Not At All", break: "Ze-N-Ze-N", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "だいてい", back: "Usually", break: "Da-I-Ta-I", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "ちょっと", back: "A Little", break: "Cho-Tto", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "ときどき", back: "Sometimes", break: "To-Ki-Do-Ki", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "よく", back: "Often / Much", break: "Yo-Ku", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "そうですね", back: "That's Right / Let Me See", break: "So-U-De-Su-Ne", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() },
-                        { front: "でも", back: "But", break: "De-Mo", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "どうですか", back: "How About...? / How is...?", break: "Do-U-De-Su-Ka", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
-                        { front: "ええ", back: "Yes (Conversation)", break: "E-E", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  }
+                        { front: "かんじ", back: "Kanji / Chinese Characters", break: "Ka-N-Ji", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() },
+                        { front: "きょうかしょ", back: "Textbook", break: "Ki-Yo-U-Ka-Sho", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "ページ", back: "Page", break: "Pe-A-Ji", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "つぎ", back: "Next", break: "Tsu-Gi", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "おかね", back: "Money", break: "O-Ka-Ne", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "にもつ", back: "Baggage", break: "Ni-Mo-Tsu", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "パソコン", back: "Personal Computer", break: "Pa-So-Kon", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "シャフー", back: "Shower", break: "Sha-Fu", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() },
+                        { front: "エアコン", back: "Air Conditioner", break: "E-A-Kon", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "でんき", back: "Electricity / Light", break: "De-N-Ki", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "まど", back: "Window", break: "Ma-Dou", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "でんしゃ", back: "Train", break: "De-N-Sha", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "くに", back: "Country / Place of Origin", break: "Ku-Ni", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "こんしゅう", back: "This Week", break: "Kon-Shu", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "らいしゅう", back: "Next Week", break: "Ra-I-Shu", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "らいねん", back: "Next Year", break: "Ra-I-Ne-N", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "よる", back: "Night", break: "Yo-Ru", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "たいへん", back: "Tough (Situation)", break: "Ta-I-He-N", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() },
+                        { front: "あそぶ", back: "To Play / To Spend Time Pleasantly", break: "A-So-Bu", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() },
+                        { front: "いそぐ", back: "To Hurry", break: "I-So-Gu", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "かえす", back: "To Return (A Thing)", break: "Ka-E-Su", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "けす", back: "To Turn Off / To Erase", break: "Ke-Su", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "しぬ", back: "To Die", break: "Shi-Nu", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "すわる", back: "To Sit Down (Seat)", break: "Su-Wa-Ru", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "たつ", back: "To Stand Up", break: "Ta-Tsu", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "たばこをすう", back: "To Smoke", break: "Ta-Ba-Ko-O-Su", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "つかう", back: "To Use", break: "Tsu-Ka-U", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "てつだう", back: "To Help (Person / Task)", break: "Te-Tsu-Da-U", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "はいる", back: "To Enter", break: "Ha-I-Ru", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "もつ", back: "To Carry / To Hold", break: "Mo-Tsu", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "やすむ", back: "To Be Absent (From...) / To Rest", break: "Ya-Su-Mu", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "あける", back: "To Open (Something)", break: "A-Ke-Ru", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() },
+                        { front: "しめる", back: "To Close (Something)", break: "Shi-Me-Ru", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "おしえる", back: "To Teach / To Instruct (Person Thing)", break: "O-Shi-E-Ru", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "わすれる", back: "To Forget / To Leave Behind", break: "Wa-Su-Re-Ru", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "おりる", back: "To Get Off", break: "O-Ri-Ru", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "かりる", back: "To Borrow", break: "Ka-Ri-Ru", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "シャワーをあびる", back: "To Take A Shower", break: "Sha-Wa-A-Bi-Ru", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "つける", back: "To Turn On", break: "Tsu-Ke-Ru", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "でんわする", back: "To Call", break: "De-N-Wa-Su-Ru", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() },
+                        { front: "つれてくる", back: "To Bring (A Person)", break: "Tsu-Re-Te-Ku-Ru", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "もってくる", back: "To Bring (A Thing)", break: "Mo-Tte-Ku-Ru", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "あとで", back: "Later On", break: "A-To-De", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now() },
+                        { front: "すぐ", back: "Right Away", break: "Su-Gu", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "ゆっくり", back: "Slowly / Leisurely / Unhurriedly", break: "Yu-Kku-Ri", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "けっこうです", back: "That Would Be Fine / That Wouldn't Be Necessary", break: "Ke-Kko-U-De-Su", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  },
+                        { front: "ほんとうですか", back: "Really?", break: "Ho-N-Tou-De-Su-Ka", interval: 0, repetitions: 0, easeFactor: 2.5, due: Date.now()  }
                     ]
                 },
             }
