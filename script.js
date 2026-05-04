@@ -18,6 +18,7 @@ let nodeHistory = [];
 let darkMode = false;
 let startX = 0;
 let endX = 0;
+let fullDeck = generateFullDeck(decks[language].children[lesson]);
 
 function toggleDarkMode() {
     darkMode = !darkMode;
@@ -73,6 +74,143 @@ function getAllCards(node) {
     return cards;
 }
 
+function generateFullDeck(folder) {
+    let allCards = [];
+
+    for (let key in folder.children) {
+        const item = folder.children[key];
+
+        // Only grab decks (skip folders if you add nested later)
+        if (item.type === "deck" && item.cards) {
+            allCards = allCards.concat(item.cards);
+        }
+    }
+
+    return {
+        type: "deck",
+        cards: allCards
+    };
+}
+
+//Index Function
+function generateLessonIndex(folder) {
+    const index = [];
+
+    function traverse(node, categoryName = "") {
+        if (node.type === "deck" && node.cards) {
+            index.push({
+                category: categoryName,
+                cards: node.cards
+            });
+        }
+
+        if (node.children) {
+            for (let key in node.children) {
+                traverse(node.children[key], key);
+            }
+        }
+    }
+
+    traverse(folder);
+
+    return index;
+}
+
+
+function renderIndex(index) {
+    const container = document.getElementById("indexList");
+    container.innerHTML = "";
+
+    index.forEach(section => {
+        const sectionDiv = document.createElement("div");
+        sectionDiv.className = "index-section";
+
+        sectionDiv.innerHTML = `<h2>${section.category}</h2>`;
+
+        const grid = document.createElement("div");
+        grid.className = "card-grid";
+
+        section.cards.forEach(card => {
+            const cardDiv = document.createElement("div");
+            cardDiv.className = "word-card";
+
+            cardDiv.innerHTML = `
+                <div class="word-front">${card.front}</div>
+                <div class="word-back">${card.back}</div>
+                <div class="word-break">${card.break || ""}</div>
+            `;
+
+            cardDiv.addEventListener("click", () => {
+                speakWord(card.front);
+            });
+
+            grid.appendChild(cardDiv);
+        });
+
+        sectionDiv.appendChild(grid);
+        container.appendChild(sectionDiv);
+    });
+}
+
+function openIndex(lessonName, lessonData) {
+    // Hide other screens
+    document.getElementById("dashboard").style.display = "none";
+    document.getElementById("lessonSelect").style.display = "none";
+    document.getElementById("studyMode").style.display = "none";
+
+    // Show index
+    document.getElementById("indexView").style.display = "block";
+
+    document.getElementById("indexTitle").textContent = lessonName;
+
+    // Build index
+    const index = generateLessonIndex(lessonData);
+    renderIndex(index);
+
+    // Setup search
+    const allCards = getAllCards(lessonData);
+
+    document.getElementById("searchInput").addEventListener("input", (e) => {
+    const query = e.target.value.trim();
+
+    const container = document.getElementById("searchResults");
+        if (query === "") {
+            container.innerHTML = "";  
+            return;
+        }
+
+        const results = searchCards(allCards, query);
+        renderSearchResults(results);
+    });
+
+}
+
+function searchCards(cards, query) {
+    query = query.toLowerCase();
+
+    return cards.filter(card =>
+        card.front.toLowerCase().includes(query) ||
+        card.back.toLowerCase().includes(query) ||
+        (card.break && card.break.toLowerCase().includes(query))
+    );
+}
+
+function renderSearchResults(results) {
+    const container = document.getElementById("searchResults");
+
+    if (!results.length) {
+        container.innerHTML = `<p style="opacity:0.6;">No results found</p>`;
+        return;
+    }
+
+    container.innerHTML = results.map(card => `
+        <div class="result">
+            <strong>${card.front}</strong> — ${card.back}
+            <br><small>${card.break || ""}</small>
+        </div>
+    `).join("");
+}
+
 // back button
 function goBack() {
     if (document.getElementById("studyMode").style.display === "block") {
@@ -84,6 +222,12 @@ function goBack() {
     if (nodeHistory.length > 0) {
         currentNode = nodeHistory.pop();
         showNode(currentNode);
+        return;
+    }
+
+    if (document.getElementById("indexView").style.display === "block") {
+        document.getElementById("indexView").style.display = "none";
+        document.getElementById("lessonSelect").style.display = "block";
         return;
     }
 
@@ -106,14 +250,18 @@ function showNode(node) {
 
         if (child.type === "folder") {
             html += `
-                <div class="lesson" onclick="openNode('${key}')">
-                    <h3>📁 ${key}</h3>
+                <div class="lesson">
+                    <h3 onclick="openNode('${key}')">${key}</h3>
+
+                    <button onclick="event.stopPropagation(); openIndex('${key}', currentNode.children['${key}'])">
+                        📖 View Index
+                    </button>
                 </div>
             `;
         } else if (child.type === "deck") {
             html += `
                 <div class="lesson">
-                    <h3>📘 ${key}</h3>
+                    <h3>${key}</h3>
 
                     <button onclick="event.stopPropagation(); startDeck('${key}', 'full')">Full</button>
 
@@ -124,10 +272,10 @@ function showNode(node) {
                     <button onclick="event.stopPropagation(); startDeck('${key}', 'typing')">
                         Typing
                     </button>
-
                 </div>
             `;
         }
+
     }
 
     document.getElementById("lessonList").innerHTML = html;
@@ -323,6 +471,19 @@ function speakCard() {
 
     utterance.rate = 0.9; // speed (0.1 - 10)
     utterance.pitch = 1;  // voice pitch
+
+    speechSynthesis.speak(utterance);
+}
+function speakWord(text) {
+    let utterance = new SpeechSynthesisUtterance(text);
+
+    if (currentLanguage === "Japanese") {
+        utterance.lang = "ja-JP";
+    } else if (currentLanguage === "Spanish") {
+        utterance.lang = "es-ES";
+    } else if (currentLanguage === "French") {
+        utterance.lang = "fr-FR";
+    }
 
     speechSynthesis.speak(utterance);
 }

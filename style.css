@@ -321,4 +321,62 @@ body.dark address {
     }
 }
 
+#indexView {
+    padding: 20px;
+}
+
+.index-section {
+    margin-bottom: 30px;
+}
+
+.index-section h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+/* grid layout */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 12px;
+}
+
+/* individual card */
+.word-card {
+    background: white;
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    cursor: pointer;
+}
+
+.word-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
+
+/* text styling */
+.word-front {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.word-back {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-top: 4px;
+}
+
+.word-break {
+    font-size: 12px;
+    opacity: 0.5;
+    margin-top: 6px;
+}
+
+.dark .word-card {
+    background: #1e1e1e;
+    color: white;
+}
+
 
