@@ -38,9 +38,17 @@
 
         <div class="lang-deck" onclick="selectLanguage('Japanese')">
             <h2>Japanese 🇯🇵</h2>
-            <p id="japaneseProgress">Progress: 0%</p>
+            <p id="mixtecoBajoProgress">Progress: 0%</p>
             <div class="progress-bar">
-                <div id="japaneseBar"></div>
+                <div id="mixtecoBajoBar"></div>
+            </div>
+        </div>
+
+        <div class="lang-deck" onclick="selectLanguage('Mixteco')">
+            <h2>Mixteco Bajo 🇲🇽</h2>
+            <p id="mixtecoBajoProgress">Progress: 0%</p>
+            <div class="progress-bar">
+                <div id="mixtecoBajoBar"></div>
             </div>
         </div>
 
@@ -115,7 +123,7 @@
     <button onclick="speakCard()">🔊 Pronounce</button>
     <button onclick="stopSpeaking()">🔇 Stop</button>
 
-    <button onclick="markEasy()">Next</button>
+    <button id="nextButton" onclick="markEasy()">Next</button>
     <button onclick="markHard()">Skip</button>
     <button onclick="resetSession()">Reset</button>
     <button onclick="goBack()">Back</button>
@@ -124,6 +132,7 @@
 <script src="decks/spanish.js"></script>
 <script src="decks/french.js"></script>
 <script src="decks/japanese.js"></script>
+<script src="decks/mixteco.js"></script>
 <script src="script.js"></script>
 
 <h1>Check Us Out</h1>

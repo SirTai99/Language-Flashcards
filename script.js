@@ -3,7 +3,8 @@ const STORAGE_KEY = "flashcard_decks";
 let decks = {
     Spanish: spanishDecks,
     French: frenchDecks,
-    Japanese: japaneseDecks
+    Japanese: japaneseDecks,
+    Mixteco: mixtecoBajoDecks
 };
 
 
@@ -376,13 +377,18 @@ function showCard() {
 
         document.getElementById("flipButton").style.display = "none";
 
+        document.getElementById("nextButton").disabled = true;
+
         document.getElementById("cardFront").innerText = card.back;
 
         document.getElementById("cardBack").innerText = "Type the answer below";
 
         document.getElementById("typingInput").value = "";
+        document.getElementById("typingInput").focus();
 
         document.getElementById("typingResult").innerText = "";
+        document.getElementById("typingResult").style.color = "white";
+        
 
     } else {
 
@@ -426,18 +432,34 @@ function checkTypedAnswer() {
 
     const result = document.getElementById("typingResult");
 
+    // CORRECT
     if (input === correct) {
 
         result.innerText = "✅ Correct!";
+        result.style.color = "limegreen";
 
-        markEasy();
+        document.getElementById("nextButton").disabled = false;
 
-    } else {
+        // wait a moment so user sees success message
+        setTimeout(() => {
+            markEasy();
+        }, 700);
+
+    } 
+    
+    // WRONG
+    else {
 
         result.innerText =
-            `❌ Correct Answer: ${card.front}`;
+            `❌ Try Again`;
 
-        markHard();
+        result.style.color = "red";
+
+        // DO NOT progress
+        // DO NOT call markHard()
+
+        // keep focus in textbox
+        document.getElementById("typingInput").focus();
     }
 }
 
@@ -465,7 +487,7 @@ function speakCard() {
         utterance.lang = "fr-FR";
     } else if (currentLanguage === "Japanese") {
         utterance.lang = "ja-JP";
-    } else if (currentLanguage === "Mixteco") {
+    } else if (currentLanguage === "Mixteco Bajo") {
         utterance.lang = "es-MX";
     }
 
@@ -483,6 +505,8 @@ function speakWord(text) {
         utterance.lang = "es-ES";
     } else if (currentLanguage === "French") {
         utterance.lang = "fr-FR";
+    } else if (currentLanguage === "Mixteco Bajo") {
+        utterance.lang = "es-MX";
     }
 
     speechSynthesis.speak(utterance);

@@ -379,4 +379,9 @@ body.dark address {
     color: white;
 }
 
+#nextButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
 
